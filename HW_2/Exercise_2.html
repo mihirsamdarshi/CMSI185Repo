@@ -3,20 +3,32 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Displaying an Array</title>
+    <title>Favorite Song List</title>
+    <script type="text/javascript" src="Exercise_2.js">
+    </script
 </head>
 
 <body>
+<p>
   <div>
-    <input id="newFavoriteSong" type="text" placeholder="Add your new favorite song here">
+    <input id="createTable" type="button" text="Create a table" onclick="createTable()">
   </div>
-  <div>
-    <input id="addSong" type="button" text="Add Song to Table">
-  </div>
-  <script src="Exercise_2.js">
-  </script>
-  <script>
-  alert(newFavoriteSong)
-  </script>
+</p>
+<p>
+  <p>
+    <div>
+      <input id="newFavoriteSong" type="text" placeholder="Add your new favorite song here">
+    </div>
+  </p>
+  <p>
+    <div>
+      <input id="addSong" type="button" text="Add Song to Table" onclick="doPush()">
+    </div>
+  </p>
+  <p>
+    <div>
+      <input id="removeSong" type="button" text="Add Song to Table" onclick="doPop()">
+    </div>
+  </p>
 </body>
 </html>

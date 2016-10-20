@@ -12,7 +12,8 @@ favoriteSongs[7] = "Loud Places - Jamie xx"
 favoriteSongs[8] = "White Lies - ODESZA"
 favoriteSongs[9] = "Fortunate Son - Creedence Clearwater Revival"
 
-for (var i = 0; i < 10; i++) {
+var createTable = function(){
+  for (var i = 0; i < 10; i++) {
     document.write("<table>");
     document.write("<tr><td>Number " + (i + 1) + " is:</td>");
     document.write("<td>" + favoriteSongs[i] + "</td></tr>");
@@ -20,11 +21,25 @@ for (var i = 0; i < 10; i++) {
 }
 
 //help from https://www.tutorialspoint.com/javascript/javascript_dialog_boxes.htm
-document.getElementById("addSong").onclick = function() {
-    var retVal = confirm("Are you sure you want to remove " + favoriteSongs[0] + "?");
-    alert(newFavoriteSong);
-    if (retVal == true) {
+var doPush = function() {
+  var retVal = confirm("Are you sure you want to add " + newFavoriteSong + "?");
+    if (retVal == true, size != 10) {
         favoriteSongs.push(newFavoriteSong);
+    }
+    else (retVal == true, size === 10) {
+        alert("The list is full!");
+    }
+    else if (retVal == false) {
+    }
+}
+var doPop = function() {
+  var retVal = confirm("Are you sure you want to remove " + favoriteSongs[0] + "?");
+    if (retVal == true, size != 0) {
         favoriteSongs.shift();
+    }
+    else (retVal == true, size === 0) {
+        alert("The list is empty!");
+    }
+    else if (retVal == false){
     }
 }
