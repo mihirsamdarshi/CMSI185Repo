@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <title>Favorite Song List</title>
     <script type="text/javascript" src="Exercise_2.js">
-    </script
+    </script>
 </head>
 
 <body>
 <p>
   <div>
-    <input id="createTable" type="button" text="Create a table" onclick="createTable()">
+    <input id="createTable" type="button" value="Create a table" onclick="createTable()">
   </div>
 </p>
 <p>
@@ -22,12 +22,16 @@
   </p>
   <p>
     <div>
-      <input id="addSong" type="button" text="Add Song to Table" onclick="doPush()">
+      <input id="addSong" type="button" value="Add Song to Table" onclick="doPush()">
     </div>
   </p>
   <p>
     <div>
-      <input id="removeSong" type="button" text="Add Song to Table" onclick="doPop()">
+      <input id="removeSong" type="button" value="Remove Song from Table" onclick="doPop()">
+    </div>
+  </p>
+  <p>
+    <div id="tableOutput">
     </div>
   </p>
 </body>

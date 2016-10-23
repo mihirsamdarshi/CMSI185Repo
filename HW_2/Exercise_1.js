@@ -1,28 +1,43 @@
-document.getElementById("execute").onclick = function() {
+var run = function() {
     var firstValue = document.getElementById("firstInput").value;
     var secondValue = document.getElementById("secondInput").value;
-    var finalValue
-    document.write("<table>");
-      do{
-        if(secondValue % 2 === 0){
-          finalValue = finalValue + firstValue
+    var a = firstValue;
+    var b = secondValue;
+    var columnOne = new Array();
+    var columnTwo = new Array();
+    var total = 0;
+    var steps = ""
+    columnOne.push(a);
+    columnTwo.push(b);
+    while (b != 1 && b != -1) {
+        a = parseInt(a * 2);
+        b = parseInt(b / 2);
+        columnOne.push(a);
+        columnTwo.push(b);
+    }
+    for (var i = 0; i < columnOne.length; i++) {
+        if (parseInt(columnTwo[i]) % 2 != 0) {
+            total = parseInt(total) + parseInt(col 1[i]);
+        } else {
+            columnOne[i] = "<strike>" + columnOne[i] + "</strike>"; 
+            columnTwo[i] = "<strike>" + columnTwo[i] + "</strike>";
         }
-
-        document.write("<tr>" "<td>" firstValue * 2 "<tr>" "</td>");
-        firstValue = firstValue * 2;
-
-        document.write("<tr>" "<td>" Math.floor(secondValue / 2) "<tr>" "</td>")
-        secondValue = Math.floor(secondValue / 2)
-      }
-
-      while(secondValue === 1);
-    document.write("</table>");
+    }
+    for (var i = 0; i < columnOne.length; i++) {
+        steps = steps + columnOne[i] + ", " + columnTwo[i] + "<br>";
+    }
+    if (firstValue < 0 && secondValue < 0) {} else {
+        columnOne[i] = "<strike>" + columnOne[i] + "</strike>";
+        columnTwo[i] = "<strike>" + columnTwo[i] + "< /strike>";
+    }
+    for (var i = 0; i < columnOne.length; i++) {
+        steps = steps + columnOne[i] + ", " + columnTwo[i] + "<br>";
+        if (firstValue < 0 && secondValue < 0) {
+            total = Math.abs(total);
+        } else if (secondValue < 0) {
+            total = total * (-1);
+        }
+        document.getElementById("resultTable").innerHTML = steps;
+        document.getElementById("result").innerHTML = "<br>" + columnOne[0] + " * " + columnTwo[0] + " — " + total;
+    }
 }
-
-/* I need to write a loop that writes to each column, and overwrites the variable
-for each value with the value affected by the operation. I then need to write an if/
-else statement embedded in this for-loop for the second column that determines whether
-it is even or odd (ideally using the modulo statement, and saying if =0 then replace
-that number with the crossed out version of that number). I need to apply this across
-the column. I then add all the numbers in the first column that are not crossed out.
-Finally I need to write a statement that appends the footer with the final value.
