@@ -1,5 +1,4 @@
 #madlib.py
-#Mihir Samdarshi
 
 adjective = input("Enter a verb: ")
 noun = input("Enter a noun: ")
