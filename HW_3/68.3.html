@@ -1,17 +1,21 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset=”utf-8"/>
-<title>Die Rolling </title>
-<style> div#die{ font-size: 800% }
+<meta charset = "utf-8" />
+<title> Die Rolling </title>
+<style>div#die { font-size: 800% }
 </style>
 </head>
 <body>
-<div><input id="roller" type="button. value=91oll. /></div> <div id="die"></div>
+<div>
+  <input id="roller" type="button" value="roll "/>
+</div> <div id="die">
+</div>
 <script>
 document.getElementById("roller").onclick = function () {
   document.getElementById("die").innerHTML =
-    "&#x268" + Math.floor(Math.random() * 6) + ";" ;
+    "&#x268 " + Math.floor(Math.random() * 6) + "; " ;
   }
 </script>
 </body>

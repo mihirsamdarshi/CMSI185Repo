@@ -1,10 +1,12 @@
-function repeatedPrompt(){
 var userInput = prompt("Enter words here")
+
+function repeatedPrompt(){
+  userInput = prompt("Enter words here again")
 }
 
 if (userInput = null){
-  return alert("The script has run its course")
+  alert("The script has run its course")
 }
 else{
-  alert(userInput.CharAt(Math.random * userInput.indexOf)) && repeatedPrompt()
+  alert(userInput.charAt(Math.floor(Math.random * userInput.length))) && repeatedPrompt()
 }
