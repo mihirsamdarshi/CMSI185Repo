@@ -6,4 +6,6 @@ def memberdiscount():
     for discount in range(0,76)
     print("The discount is equal to " discount " percent")
     else
-    print ("The discount is equal to 75 percent")
+    print("The discount is equal to 75 percent")
+
+memberdiscount()
