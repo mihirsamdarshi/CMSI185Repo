@@ -1,95 +1,79 @@
-Multiplication_webpage_javascript.js
-    //initializes an object of type action with 0 and + as its defaults
-var save = {
+var storedValue = {
     num: 0,
-    operation: '+'
+    operation: "+"
+}
+document.getElementById("one").onclick = function() {  
+        document.getElementById("input").value = 1
+    }
+document.getElementById("two").onclick = function() {  
+        document.getElementById("input").value = 2
+    }
+document.getElementById("three").onclick = function() {  
+        document.getElementById("input").value = 3
+    }
+document.getElementById("four").onclick = function() {  
+        document.getElementById("input").value = 4
+    }
+document.getElementById("five").onclick = function() {  
+        document.getElementById("input").value = 5
+    }
+document.getElementById("six").onclick = function() {  
+        document.getElementById("input").value = 6
+    }
+document.getElementById("seven").onclick = function() {  
+        document.getElementById("input").value = 7
+    }
+document.getElementById("eight").onclick = function() {  
+        document.getElementById("input").value = 8
+    }
+document.getElementById("nine").onclick = function() {  
+    document.getElementById("input").value = 9
+}
+document.getElementById("zero").onclick = function() {  
+    document.getElementById("input").value = 0
 }
 
-//types in number 1
-document.getElementById('one').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 1
+document.getElementById("clear").onclick = function() {  
+        document.getElementById("input").value = ""  
+        document.getElementById("output").innerHTML = ""
     }
-    //types in number 2
-document.getElementById('two').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 2
+document.getElementById("plus").onclick = function() {  
+        storedValue.num = document.getElementById("input").value
+        storedValue.operation = "+"  
+        document.getElementById("input").value = ""
     }
-    //types in number 3
-document.getElementById('three').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 3
+document.getElementById("minus").onclick = function() {  
+        storedValue.num = document.getElementById("input").value
+        storedValue.operation = "-"  
+        document.getElementById("input").value = ""
     }
-    //types in number 4
-document.getElementById('four').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 4
+document.getElementById("multiply").onclick = function() {  
+        storedValue.num = document.getElementById("input").value
+        storedValue.operation = "*"  
+        document.getElementById("input").value = ""
     }
-    //types in number 5
-document.getElementById('five').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 5
-    }
-    //types in number 6
-document.getElementById('six').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 6
-    }
-    //types in number 7
-document.getElementById('seven').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 7
-    }
-    //types in number 8
-document.getElementById('eight').onclick = function() {  
-        document.getElementById('input').value = (document.getElementById('input').value * 10) + 8
-    }
-    //types in number 9
-document.getElementById('nine').onclick = function() {  
-    document.getElementById('input').value = (document.getElementById('input').value * 10) + 9
+document.getElementById("divide").onclick = function() {  
+    storedValue.num = document.getElementById("input").value
+    storedValue.operation = "/"  
+    document.getElementById("input").value = ""
 }
-
-
-//types in number 0
-document.getElementById('zero').onclick = function() {  
-    document.getElementById('input').value = (document.getElementById('input').value * 10)
-}
-
-
-
-//clears input box when clear in clicked
-document.getElementById('clear').onclick = function() {  
-        document.getElementById('input').value = ''  
-        document.getElementById('output').innerHTML = ''
-    }
-    //saves input number and + as operation, then clears the text input box
-document.getElementById('plus').onclick = function() {  
-        save.num = document.getElementById('input').value   save.operation = '+'  
-        document.getElementById('input').value = ""
-    }
-    //saves input number and - as operation, then clears the text input box
-document.getElementById('minus').onclick = function() {  
-        save.num = document.getElementById('input').value   save.operation = '-'  
-        document.getElementById('input').value = ""
-    }
-    //saves input number and * as operation, then clears the text input box
-document.getElementById('multiply').onclick = function() {  
-        save.num = document.getElementById('input').value   save.operation = '*'  
-        document.getElementById('input').value = ""
-    }
-    //saves input number and / as operation, then clears the text input box
-document.getElementById('divide').onclick = function() {  
-    save.num = document.getElementById('input').value   save.operation = '/'  
-    document.getElementById('input').value = ""
-}
-
-//takes number stored and number in input box and does specified operation
-//puts string with answer into running log at bottom of page
-document.getElementById('equals').onclick = function() {  
+document.getElementById("equals").onclick = function() {  
     var outputStr  
-    var currentNum = document.getElementById('input').value  
+    var currentNum = document.getElementById("input").value  
     var finalNum  
-    if (save.operation == '+') {      
-        finalNum = +save.num + +currentNum       outputStr = save.num + " + " + currentNum + " = " + finalNum  
-    } else if (save.operation == '-') {      
-        finalNum = save.num - currentNum       outputStr = save.num + " - " + currentNum + " = " + finalNum  
-    } else if (save.operation == '*') {      
-        finalNum = save.num * currentNum       outputStr = save.num + " * " + currentNum + " = " + finalNum  
+    if (storedValue.operation == "+") {      
+        finalNum = storedValue.num + currentNum
+        outputStr = storedValue.num + " + " + currentNum + " = " + finalNum  
+    } else if (storedValue.operation == "-") {      
+        finalNum = storedValue.num - currentNum
+        outputStr = storedValue.num + " - " + currentNum + " = " + finalNum  
+    } else if (storedValue.operation == "*") {      
+        finalNum = storedValue.num * currentNum
+        outputStr = storedValue.num + " * " + currentNum + " = " + finalNum  
     } else {      
-        finalNum = save.num / currentNum       outputStr = save.num + " / " + currentNum + " = " + finalNum  
+        finalNum = storedValue.num / currentNum
+        outputStr = storedValue.num + " / " + currentNum + " = " + finalNum  
     }  
-    document.getElementById('output').innerHTML = outputStr   document.getElementById('input').value = finalNum
+    document.getElementById("output").innerHTML = outputStr
+    document.getElementById("input").value = finalNum
 }
