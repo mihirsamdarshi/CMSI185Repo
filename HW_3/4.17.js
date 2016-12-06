@@ -1,10 +1,5 @@
 var userInput = prompt("Enter a number between 1 - 10,000 here")
-if (userInput == NaN) {
-    alert("Please try again")
-} else if (userInput > 10000) {
-    alert("Please try again")
-} else {
-    function collatzNumber() {
+for(userInput < 100000, userInput ) {
         var n = userInput
         var steps = 0
         while (n > 1) {
@@ -18,4 +13,3 @@ if (userInput == NaN) {
         }
         alert(steps)
     }
-}
