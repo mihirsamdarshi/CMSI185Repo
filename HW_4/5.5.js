@@ -1,10 +1,8 @@
-a = [5, 6, 7]
-var sum = function(a) {
-  var result = 0;
-  for(var i = 0; i < a.length; i += 1){
-    result += a[i];
-  }
-  alert(result);
+var lowNum = prompt("Enter your lower number here")
+var highNum = prompt("Enter your higher number here")
+
+var randomNum = function(lowNum, highNum){
+  Math.floor(Math.random() * highNum) + lowNum
 }
 
-sum()
+randomNum()

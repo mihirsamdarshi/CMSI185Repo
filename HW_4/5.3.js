@@ -1,8 +1,10 @@
-function averageOfAnArray(array) {
+var newArray = []
+
+function averageOfAnArray() {
   var sum = 0;
-  for (var i = 0; i < array.length; i++) {
-    sum += array[i];
-    average = sum/array.length;
+  for (var i = 0; i < newArray.length; i++) {
+    sum += newArray[i];
+    var average = sum/newArray.length;
   }
   return average;
 }
