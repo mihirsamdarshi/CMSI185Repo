@@ -6,16 +6,14 @@ function checkLetter() {
     var letterArray = []
     var i = 0
     while (i < n.length) {
-        if (i = n.indexOf(letter)){
+        if (n[i] == letter){
             letterArray.push(i)
         };
-        i++;
+      i++;
     }
     var length = letterArray.length;
 
-    console.log(n);
-    console.log(letterArray);
-    console.log(length);
+    alert(length);
 }
 
 checkLetter()
