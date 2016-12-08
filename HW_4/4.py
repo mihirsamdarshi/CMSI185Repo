@@ -15,7 +15,7 @@ print(main)
 print(less)
 print(greater)
 
-if main > less
+if main > less and main < greater
     print("There are 2 intersections")
 
 elif main < less or main > greater
